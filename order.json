@@ -1,0 +1,32 @@
+{
+	merchantOrderId: "myOrderId",
+  deviceSessionId: "mySess1",
+  creationDateTime: "2024-03-21T10:46:22Z",
+  userIp: "163.116.253.48",
+  transactions: [{      
+    payment: {  
+      type: "CREDIT_CARD",
+      bin: "483312",
+      last4: "1111"      
+    },
+    orderTotal: 100,
+    currency: "USD",
+    billedPerson: {        
+      name: {          
+        first: "Jimmy",
+        last: "Jazz"
+      },
+      emailAddress: "jjazz@kount.com",
+      phoneNumber: "+15551234567",
+      address: {          
+        addressType: "BILLING",
+        line1: "1010 Main street",
+        line2: "string",
+        city: "Boise",
+        region: "ID",
+        postalCode: "83701",
+        countryCode: "US"        
+      }},
+      transactionStatus: "PENDING"    
+  }]
+}
