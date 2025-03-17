@@ -10,4 +10,3 @@ require "kount/abstract_response"
 require "kount/response"
 require "kount/error"
 require "kount/client"
-require "kount/httplog_config" if ENV["KOUNT_DEBUG_HTTP"]

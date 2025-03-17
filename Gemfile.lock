@@ -40,9 +40,6 @@ GEM
     faker (3.5.1)
       i18n (>= 1.8.11, < 2)
     hashdiff (1.1.2)
-    httplog (1.7.0)
-      rack (>= 2.0)
-      rainbow (>= 2.0.0)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
     json (2.10.1)
@@ -66,7 +63,6 @@ GEM
       pry (>= 0.13, < 0.15)
     public_suffix (6.0.1)
     racc (1.8.1)
-    rack (3.1.12)
     rainbow (3.1.1)
     rake (13.2.1)
     redis (5.4.0)
@@ -123,7 +119,6 @@ PLATFORMS
 
 DEPENDENCIES
   faker
-  httplog
   kount!
   pry-byebug
   rake (~> 13.0)
