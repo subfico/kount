@@ -4,7 +4,6 @@ PATH
     kount (0.1.0)
       activesupport
       addressable (~> 2.8.5)
-      httplog
       net-sftp
 
 GEM
@@ -124,6 +123,7 @@ PLATFORMS
 
 DEPENDENCIES
   faker
+  httplog
   kount!
   pry-byebug
   rake (~> 13.0)

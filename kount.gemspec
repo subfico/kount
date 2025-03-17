@@ -36,10 +36,10 @@ Gem::Specification.new do |spec|
   # guide at: https://bundler.io/guides/creating_gem.html
   spec.add_dependency "activesupport"
   spec.add_dependency "addressable", "~> 2.8.5"
-  spec.add_dependency "httplog"
   spec.add_dependency "net-sftp"
 
   spec.add_development_dependency "faker"
+  spec.add_development_dependency "httplog"
   spec.add_development_dependency "pry-byebug"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec"
