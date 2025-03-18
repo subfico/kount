@@ -34,7 +34,7 @@ RSpec.describe Kount::Client do
   end
 
   describe "#create_order" do
-    let(:order) { { order_number: "123" } }
+    let(:order) { { merchant_order_id: "123", device_session_id: "456" } }
     let(:expected_url) { "#{host}/commerce/v2/orders?riskInquiry=true" }
 
     before do
@@ -42,9 +42,18 @@ RSpec.describe Kount::Client do
     end
 
     it "calls post_order internally" do
-      expect(client_instance).to receive(:post_order).with(order, true).and_call_original
+      expect(client_instance)
+        .to receive(:post_order)
+        .with(order, true).and_call_original
+
       stub_request(:post, expected_url)
-        .with(headers: { "Authorization" => "Bearer dummy_token", "Content-Type" => "application/json" })
+        .with(
+          body: order.transform_keys! { |k| k.to_s.camelize(:lower) },
+          headers: {
+            "Authorization" => "Bearer dummy_token",
+            "Content-Type" => "application/json"
+          }
+        )
         .to_return(status: 200, body: { order: { order_id: "123" } }.to_json)
 
       client_instance.create_order(order)
